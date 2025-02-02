@@ -1,0 +1,42 @@
+:root {
+  --main-color: rgb(64, 68, 201);
+  --second-color: rgb(255, 255, 255);
+  --active-color: rgb(90, 94, 226);
+}
+
+.dates-background {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  background-color: var(--main-color);
+}
+
+.dates-cont {
+  display: flex;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 14vh;
+  border-radius: 50px 0px 0px;
+  border: solid 1px green;
+  background-color: var(--second-color);
+}
+
+.date-view {
+  background-color: transparent;
+  border: solid 3px var(--main-color);
+  width: 33%;
+  height: 60%;
+  margin: 0.9em;
+  border-radius: 20px 2px 20px 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.date-view > * {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--main-color);
+}
