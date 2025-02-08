@@ -6,6 +6,7 @@ export function AddTask() {
           type="text"
           className="task-input-name"
           placeholder="Wpisz zadanie"
+          name="task-input-name"
         />
         <button className="add-btn">Dodaj</button>
       </div>
