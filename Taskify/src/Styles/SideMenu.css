@@ -12,6 +12,16 @@
   z-index: 101;
   position: absolute;
   background-color: var(--main-color);
+  animation: SideIN 0.3s ease-in-out;
+}
+
+@keyframes SideIN {
+  0% {
+    left: -350px;
+  }
+  100% {
+    left: 0px;
+  }
 }
 .exit-icon {
   width: 95%;

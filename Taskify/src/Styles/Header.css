@@ -69,3 +69,41 @@ header {
   margin-left: auto;
   margin-right: 1em;
 }
+
+.add-task-modal-cont {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background-color: var(--main-color);
+  z-index: 100;
+}
+.modal-depe {
+  display: flex;
+  width: 100%;
+  height: 60%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subbmit-btn {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3em;
+  color: var(--main-color);
+}
+.task-input {
+  height: 40%;
+  width: 70%;
+  margin: 0.5em;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: black;
+}
