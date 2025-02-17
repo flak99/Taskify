@@ -1,11 +1,12 @@
+/* eslint-disable react/prop-types */
 import { IoMenuSharp } from "react-icons/io5";
 
-export function Header() {
+export function Header({ toggleSideModal }) {
   return (
     <>
       <header>
         <div className="header-part">
-          <div className="menu-bar">
+          <div className="menu-bar" onClick={toggleSideModal}>
             <IoMenuSharp size={50} />
           </div>
           <div className="data-cont">

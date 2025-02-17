@@ -1,11 +1,12 @@
+/* eslint-disable react/prop-types */
 import { SlArrowLeft } from "react-icons/sl";
 
-export function SideMenu() {
+export function SideMenu({ toggleSideModalFalse }) {
   const username = "Krystian";
   return (
     <>
       <div className="side-menu-container">
-        <div className="exit-icon">
+        <div className="exit-icon" onClick={toggleSideModalFalse}>
           {" "}
           <SlArrowLeft size={20} />
         </div>
