@@ -14,6 +14,7 @@
 
 .dates-cont {
   display: flex;
+  justify-content: center;
   position: absolute;
   z-index: 100;
   width: 100%;
@@ -26,7 +27,7 @@
 .date-view {
   background-color: transparent;
   border: solid 3px var(--main-color);
-  width: 33%;
+  width: 80%;
   height: 60%;
   margin: 0.9em;
   border-radius: 20px 2px 20px 2px;

@@ -34,7 +34,6 @@ header {
   align-items: center;
   width: 30%;
   color: var(--second-color);
-  border: solid 1px green;
 }
 
 .data-cont {

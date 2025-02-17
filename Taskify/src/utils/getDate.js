@@ -1,18 +1,16 @@
-const daysName = ["NIE", "PO", "WT", "ŚR", "CZW", "PI", "SOB"];
+// Names of days
+
+const daysName = [
+  "NIEDZIELA",
+  "PONIEDZIAŁEK",
+  "WTOREK",
+  "ŚRODA",
+  "CZWARTEK",
+  "PIĄTKE",
+  "SOBOTA",
+];
+
 let date = new Date();
-
-export function GetDayNameYesterday() {
-  let day = date.getDay();
-  let yesterday;
-
-  if (day === 0) {
-    return (yesterday = daysName[6]);
-  } else {
-    yesterday = daysName[day - 1];
-  }
-
-  return yesterday;
-}
 
 export function GetDayNameToday() {
   let day = date.getDay();
@@ -21,14 +19,14 @@ export function GetDayNameToday() {
   return today;
 }
 
-export function GetDayNameTommorow() {
-  let day = date.getDay();
-  let tommorow;
-  if (day === 6) {
-    return (tommorow = daysName[0]);
-  } else {
-    tommorow = daysName[day + 1];
-  }
+// Foramt of the data input (exp. 01.02)
 
-  return tommorow;
+export function GetDateFormatToday() {
+  const date = new Date();
+  const mouthNumber = date.getMonth() + 1;
+  const dayNumber = date.getDate();
+
+  return `${dayNumber < 10 ? "0" + dayNumber : dayNumber}.${
+    mouthNumber < 10 ? "0" + mouthNumber : mouthNumber
+  }`;
 }
