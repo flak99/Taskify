@@ -10,7 +10,6 @@ import "./Styles/Header.css";
 import "./Styles/Dates.css";
 import "./Styles/Tasks.css";
 import "./Styles/AddTask.css";
-import "./Styles/SideMenu.css";
 
 export function App() {
   const [isSideModalVisible, setSideModalVisible] = useState(false);

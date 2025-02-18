@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { SlArrowLeft } from "react-icons/sl";
+import "../Styles/SideMenu.css"; // Podwwójna kropka oznacza wysjcie z folderu do jego narzednego i potem przejscie do danego folderu za pomomca sciezki
 
 export function SideMenu({ toggleSideModalFalse }) {
   const username = "Krystian";
