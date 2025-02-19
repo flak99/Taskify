@@ -2,12 +2,20 @@
 import { useState } from "react";
 import { IoMenuSharp } from "react-icons/io5";
 import "./Header.css";
+import { GetDayNameToday, GetDayOfMouth } from "../../utils/getDate";
 
-export function Header({ toggleSideModal }) {
+export function Header({ toggleSideModal, onAddTask }) {
   const [isAddTaskModalVisible, setIsAddTaskMOdalVisible] = useState(false);
+  const [inputValue, setInputValue] = useState("");
 
   function ToggleModalVisibility() {
     setIsAddTaskMOdalVisible((prevSet) => !prevSet);
+  }
+
+  function onHandleAddTaskToList() {
+    if (inputValue.trim() !== "") {
+      onAddTask(inputValue);
+    }
   }
 
   return (
@@ -20,8 +28,15 @@ export function Header({ toggleSideModal }) {
                 type="text"
                 className="task-input"
                 placeholder="Dodaj Zadanie"
+                onChange={(e) => setInputValue(e.target.value)}
               />
-              <button className="subbmit-btn" onClick={ToggleModalVisibility}>
+              <button
+                className="subbmit-btn"
+                onClick={() => {
+                  onHandleAddTaskToList();
+                  ToggleModalVisibility();
+                }}
+              >
                 Dodaj Zadanie
               </button>
             </div>
@@ -32,13 +47,15 @@ export function Header({ toggleSideModal }) {
             <IoMenuSharp size={50} />
           </div>
           <div className="data-cont">
-            <div className="data-label">2 LUT</div>
+            <div className="data-label">
+              <GetDayOfMouth /> <GetDayNameToday />
+            </div>
           </div>
         </div>
         <div className="header-part">
           <div className="amount-tast-cont font-style">
             <p>DZISIAJ</p>
-            <div className="amount-task font-style"> 0 zadań</div>
+            <div className="amount-task font-style"> {`2 zadań`}</div>
           </div>
           <div className="add-task-btn-cont">
             <button className="add-task-btn" onClick={ToggleModalVisibility}>

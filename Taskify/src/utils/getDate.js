@@ -30,3 +30,11 @@ export function GetDateFormatToday() {
     mouthNumber < 10 ? "0" + mouthNumber : mouthNumber
   }`;
 }
+
+// Day of mouth
+
+export function GetDayOfMouth() {
+  let date = new Date();
+  let day = date.getDate();
+  return day;
+}

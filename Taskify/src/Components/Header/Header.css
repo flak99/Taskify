@@ -1,6 +1,7 @@
 :root {
   --main-color: rgb(64, 68, 201);
   --second-color: rgb(255, 255, 255);
+  --hover-color: rgb(218, 231, 107);
   --active-color: rgb(90, 94, 226);
 }
 
@@ -34,6 +35,11 @@ header {
   align-items: center;
   width: 30%;
   color: var(--second-color);
+  transition: color 0.3s ease;
+}
+.menu-bar:hover {
+  cursor: pointer;
+  color: var(--hover-color);
 }
 
 .data-cont {
