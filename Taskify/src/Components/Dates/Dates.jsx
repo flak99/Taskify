@@ -1,4 +1,5 @@
-import { GetDayNameToday, GetDateFormatToday } from "../utils/getDate";
+import { GetDayNameToday, GetDateFormatToday } from "../../utils/getDate";
+import "./Dates.css";
 
 export function Dates() {
   return (

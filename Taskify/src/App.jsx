@@ -1,15 +1,11 @@
 import { useState } from "react";
-import { Header } from "./Components/Header";
-import { Dates } from "./Components/Dates";
-import { Tasks } from "./Components/Tasks";
-import { AddTask } from "./Components/AddTask";
-import { SideMenu } from "./Components/SideMenu";
+import { Header } from "./Components/Header/Header";
+import { Dates } from "./Components/Dates/Dates";
+import { Tasks } from "./Components/Tasks/Tasks";
+import { AddTask } from "./Components/AddTask/AddTask";
+import { SideMenu } from "./Components/SideMenu/SideMenu";
 
 import "./index.css";
-import "./Styles/Header.css";
-import "./Styles/Dates.css";
-import "./Styles/Tasks.css";
-import "./Styles/AddTask.css";
 
 export function App() {
   const [isSideModalVisible, setSideModalVisible] = useState(false);

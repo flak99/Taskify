@@ -1,3 +1,5 @@
+import "./AddTask.css";
+
 export function AddTask() {
   return (
     <>

@@ -1,3 +1,5 @@
+import "./Tasks.css";
+
 export function Tasks() {
   return (
     <>

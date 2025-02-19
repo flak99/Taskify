@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { IoMenuSharp } from "react-icons/io5";
+import "./Header.css";
 
 export function Header({ toggleSideModal }) {
   const [isAddTaskModalVisible, setIsAddTaskMOdalVisible] = useState(false);
