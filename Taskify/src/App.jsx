@@ -21,12 +21,20 @@ export function App() {
     setTaskList((prevList) => [...prevList, newTask]);
   }
 
+  function numberOfTasks() {
+    return taskList.length;
+  }
+
   return (
     <>
       {isSideModalVisible && (
         <SideMenu toggleSideModalFalse={toggleSideModalFalse} />
       )}
-      <Header toggleSideModal={toggleSideModalTrue} onAddTask={handleAddTask} />
+      <Header
+        toggleSideModal={toggleSideModalTrue}
+        onAddTask={handleAddTask}
+        numberOfTasks={numberOfTasks}
+      />
       <Dates />
       <Tasks taskList={taskList} />
     </>

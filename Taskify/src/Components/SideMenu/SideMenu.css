@@ -31,6 +31,11 @@
   color: var(--second-color);
 }
 
+.exit-icon:hover {
+  cursor: pointer;
+  color: var(--lvl-color);
+}
+
 .welcome-sentence {
   margin-top: 2em;
   color: var(--second-color);

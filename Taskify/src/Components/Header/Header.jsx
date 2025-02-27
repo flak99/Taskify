@@ -2,11 +2,18 @@
 import { useState } from "react";
 import { IoMenuSharp } from "react-icons/io5";
 import "./Header.css";
-import { GetDayNameToday, GetDayOfMouth } from "../../utils/getDate";
+import { GetDayOfMouth, GetnameOfMounth } from "../../utils/getDate";
 
-export function Header({ toggleSideModal, onAddTask }) {
+export function Header({ toggleSideModal, onAddTask, numberOfTasks }) {
   const [isAddTaskModalVisible, setIsAddTaskMOdalVisible] = useState(false);
   const [inputValue, setInputValue] = useState("");
+
+  function handleOnKeyDown(event) {
+    if (event.key === "Enter") {
+      onHandleAddTaskToList();
+      ToggleModalVisibility();
+    }
+  }
 
   function ToggleModalVisibility() {
     setIsAddTaskMOdalVisible((prevSet) => !prevSet);
@@ -28,7 +35,9 @@ export function Header({ toggleSideModal, onAddTask }) {
                 type="text"
                 className="task-input"
                 placeholder="Dodaj Zadanie"
+                autoFocus
                 onChange={(e) => setInputValue(e.target.value)}
+                onKeyDown={handleOnKeyDown}
               />
               <button
                 className="subbmit-btn"
@@ -48,14 +57,14 @@ export function Header({ toggleSideModal, onAddTask }) {
           </div>
           <div className="data-cont">
             <div className="data-label">
-              <GetDayOfMouth /> <GetDayNameToday />
+              <GetDayOfMouth /> <GetnameOfMounth />
             </div>
           </div>
         </div>
         <div className="header-part">
           <div className="amount-tast-cont font-style">
             <p>DZISIAJ</p>
-            <div className="amount-task font-style"> {`2 zadań`}</div>
+            <div className="amount-task font-style">{`${numberOfTasks()} zadań`}</div>
           </div>
           <div className="add-task-btn-cont">
             <button className="add-task-btn" onClick={ToggleModalVisibility}>

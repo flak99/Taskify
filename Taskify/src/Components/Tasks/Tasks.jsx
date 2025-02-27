@@ -1,29 +1,21 @@
-// import "./Tasks.css";
-
-// export function Tasks({}) {
-//   return (
-//     <>
-//       <div className="tasks-area">
-//         <div className="task">
-//           <div className="task-name">Zrobić pranie</div>
-//           <button className="delete-btn">usuń</button>
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
-
 /* eslint-disable react/prop-types */
 import "./Tasks.css";
 
 export function Tasks({ taskList }) {
+  function getTaskId(event) {
+    let taskIdValue = event.target.closest(".task").id; // Pobieranie ID najblizszego rodzica, przycisku usun
+    return console.log(taskIdValue);
+  }
+
   return (
     <div className="tasks-area">
       {taskList.length > 0 ? (
         taskList.map((task, index) => (
-          <div key={index} className="task">
+          <div key={index} className="task" id={index}>
             <div className="task-name">{task}</div>
-            <button className="delete-btn">Usuń</button>
+            <button className="delete-btn" onClick={getTaskId}>
+              Usuń
+            </button>
           </div>
         ))
       ) : (

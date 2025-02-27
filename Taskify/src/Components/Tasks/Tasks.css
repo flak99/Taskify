@@ -42,4 +42,11 @@
   background-color: transparent;
   margin-right: 0.5em;
   color: rgb(51, 49, 49);
+  transition: color 0.5s ease-in-out;
+  height: 100%;
+}
+
+.delete-btn:hover {
+  cursor: pointer;
+  color: whitesmoke;
 }

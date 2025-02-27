@@ -38,3 +38,24 @@ export function GetDayOfMouth() {
   let day = date.getDate();
   return day;
 }
+
+export function GetnameOfMounth() {
+  const mounthName = [
+    "STY",
+    "LUT",
+    "MAR",
+    "KWI",
+    "MAJ",
+    "CZE",
+    "LIP",
+    "SIE",
+    "WRZ",
+    "PAŹ",
+    "LIS",
+    "GRU",
+  ];
+
+  let date = new Date();
+  let name = date.getMonth();
+  return mounthName[name];
+}

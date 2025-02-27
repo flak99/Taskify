@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./AddTask.css";
 
 export function AddTask() {
@@ -10,7 +9,7 @@ export function AddTask() {
           className="task-input-name"
           placeholder="Wpisz zadanie"
           name="task-input-name"
-          onChange={onHandlerAddTask}
+          autoFocus
         />
         <button className="add-btn">Dodaj</button>
       </div>
