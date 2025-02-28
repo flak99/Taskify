@@ -13,6 +13,11 @@ export function Tasks({ taskList }) {
         taskList.map((task, index) => (
           <div key={index} className="task" id={index}>
             <div className="task-name">{task}</div>
+            <input
+              type="checkbox"
+              className="check-box-task"
+              id="check-box-task"
+            />
             <button className="delete-btn" onClick={getTaskId}>
               Usuń
             </button>
