@@ -20,6 +20,9 @@ export function App() {
   function handleAddTask(newTask) {
     setTaskList((prevList) => [...prevList, newTask]);
   }
+  const removeTask = (id) => {
+    setTaskList(taskList.filter((task, index) => index !== id));
+  };
 
   function numberOfTasks() {
     return taskList.length;
@@ -36,7 +39,7 @@ export function App() {
         numberOfTasks={numberOfTasks}
       />
       <Dates />
-      <Tasks taskList={taskList} />
+      <Tasks taskList={taskList} onDeleteTask={removeTask} />
     </>
   );
 }

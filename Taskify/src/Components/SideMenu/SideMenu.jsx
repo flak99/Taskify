@@ -4,6 +4,7 @@ import "./SideMenu.css";
 
 export function SideMenu({ toggleSideModalFalse }) {
   const username = "Krystian";
+
   return (
     <>
       <div className="side-menu-container">
@@ -13,7 +14,7 @@ export function SideMenu({ toggleSideModalFalse }) {
         </div>
         <p className="welcome-sentence">Cześć {username}, twój poziom</p>
         <div className="lvl-container">
-          <div className="lvl">2</div>
+          <div className="lvl">20</div>
         </div>
         <div className="exp-bar"></div>
       </div>
